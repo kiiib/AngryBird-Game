@@ -8,6 +8,13 @@ public class probeCheckDragging : MonoBehaviour {
     public LineRenderer catapultLineFront;
     public LineRenderer catapultLineBack;
 
+    private SpringJoint2D spring;
+
+    void Awake()
+    {
+        spring = GetComponent<SpringJoint2D>();
+    }
+
     // Use this for initialization
     void Start () {
         LineRendererSetup();
@@ -30,5 +37,16 @@ public class probeCheckDragging : MonoBehaviour {
         catapultLineBack.sortingOrder = 1;
     }
 
+    void OnMouseDown()
+    {
+        spring.enabled = false;
 
+    }
+
+    void OnMouseUp()
+    {
+        spring.enabled = true;
+        
+
+    }
 }
