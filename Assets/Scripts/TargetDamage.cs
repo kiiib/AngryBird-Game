@@ -7,11 +7,11 @@ public class TargetDamage : MonoBehaviour {
     public int hitPoints = 2;
     public Sprite damagedSprite;
     public float damageImpactSpeed;
+    public AudioSource killBirdAudio;
 
     private int currentHitPoints;
     private float damageImpactSpeedSqr;
     private SpriteRenderer spriteRenderer;
-
 
 	// Use this for initialization
 	void Start () {
@@ -41,5 +41,6 @@ public class TargetDamage : MonoBehaviour {
         GetComponent<Collider2D>().enabled = false;
         GetComponent<Rigidbody2D>().isKinematic = true;
         GetComponent<ParticleSystem>().Play();
+        killBirdAudio.Play();
     }
 }

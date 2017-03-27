@@ -8,6 +8,7 @@ public class ProjectileDragging : MonoBehaviour {
     public LineRenderer catapultLineFront;
     public LineRenderer catapultLineBack;
     //public bool isKinematic;
+    public AudioSource dragOffAudio;
 
     private SpringJoint2D spring;
     private Transform catapult;
@@ -38,8 +39,11 @@ public class ProjectileDragging : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (clickedOn)
+        if (clickedOn){
             Dragging();
+            dragOffAudio.Play();
+        }
+            
 
         if(spring != null) {
             if(!GetComponent<Rigidbody2D>().isKinematic && prevVelocity.sqrMagnitude > GetComponent<Rigidbody2D>().velocity.sqrMagnitude) {

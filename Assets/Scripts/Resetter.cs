@@ -5,9 +5,11 @@ using UnityEngine;
 public class Resetter : MonoBehaviour {
     public Rigidbody2D projectile;
     public float resetSpeed = 0.025f;
+    public int lifeVolume = 3;  //default life is 3
 
     private float resetSpeedSqr;
     private SpringJoint2D spring;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +32,7 @@ public class Resetter : MonoBehaviour {
     void OnTriggerExit2D(Collider2D other)
     {
         if(other.GetComponent<Rigidbody2D>() == projectile) {
+            lifeVolume--;
             Reset();
         }
     }
