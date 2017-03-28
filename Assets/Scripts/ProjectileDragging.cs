@@ -7,7 +7,6 @@ public class ProjectileDragging : MonoBehaviour {
     public float maxStretch = 3.0f;
     public LineRenderer catapultLineFront;
     public LineRenderer catapultLineBack;
-    //public bool isKinematic;
     public AudioSource dragOffAudio;
 
     private SpringJoint2D spring;
@@ -68,8 +67,6 @@ public class ProjectileDragging : MonoBehaviour {
 
             }
         }
-            
-        
 	}
 
     void LineRendererSetup()
