@@ -12,6 +12,7 @@ public class TargetDamage : MonoBehaviour {
     private int currentHitPoints;
     private float damageImpactSpeedSqr;
     private SpriteRenderer spriteRenderer;
+    private float timer = 0;  //countdown time
 
 	// Use this for initialization
 	void Start () {
@@ -42,5 +43,22 @@ public class TargetDamage : MonoBehaviour {
         GetComponent<Rigidbody2D>().isKinematic = true;
         GetComponent<ParticleSystem>().Play();
         killBirdAudio.Play();
+        timer += Time.deltaTime;
+        Debug.Log(timer);
+        if (timer > 1)
+        {
+            Debug.Log(Application.loadedLevelName);
+            Application.LoadLevel("SecondScene");
+        }
+       
+
+        //if(Application.loadedLevelName == "FirstScene")
+        //{
+        //   Application.LoadLevel("SecondScene");
+        // }else
+        //{
+        //     Application.LoadLevel("FirstScene");
+        // }
+
     }
 }

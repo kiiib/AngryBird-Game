@@ -27,38 +27,49 @@ public class ProjectileDragging : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        LineRendererSetup();
-        rayToMouse = new Ray(catapult.position, Vector3.zero);
-        leftCatapultToProjectile = new Ray(catapultLineFront.transform.position, Vector3.zero);
+        if (GameObject.Find("PlayerLife").GetComponent<PlayerLife>().lifeVolume > 0)
+        {
+            LineRendererSetup();
+            rayToMouse = new Ray(catapult.position, Vector3.zero);
+            leftCatapultToProjectile = new Ray(catapultLineFront.transform.position, Vector3.zero);
 
-        maxStretchSqr = maxStretch * maxStretch;
-        CircleCollider2D circle = GetComponent<Collider2D>() as CircleCollider2D;
-        circleRadius = circle.radius;
+            maxStretchSqr = maxStretch * maxStretch;
+            CircleCollider2D circle = GetComponent<Collider2D>() as CircleCollider2D;
+            circleRadius = circle.radius;
+        }
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (clickedOn){
-            Dragging();
-            dragOffAudio.Play();
+        if (GameObject.Find("PlayerLife").GetComponent<PlayerLife>().lifeVolume > 0) {
+            if (clickedOn)
+            {
+                Dragging();
+                dragOffAudio.Play();
+            }
+            if (spring != null)
+            {
+                if (!GetComponent<Rigidbody2D>().isKinematic && prevVelocity.sqrMagnitude > GetComponent<Rigidbody2D>().velocity.sqrMagnitude)
+                {
+                    Destroy(spring);
+                    GetComponent<Rigidbody2D>().velocity = prevVelocity;
+                }
+
+                if (!clickedOn)
+                {
+                    prevVelocity = GetComponent<Rigidbody2D>().velocity;
+                }
+
+                LineRendererUpdate();
+            }
+            else
+            {
+
+            }
         }
             
-
-        if(spring != null) {
-            if(!GetComponent<Rigidbody2D>().isKinematic && prevVelocity.sqrMagnitude > GetComponent<Rigidbody2D>().velocity.sqrMagnitude) {
-                Destroy(spring);
-                GetComponent<Rigidbody2D>().velocity = prevVelocity;
-            }
-
-            if (!clickedOn) {
-                prevVelocity = GetComponent<Rigidbody2D>().velocity;
-            }
-
-            LineRendererUpdate();
-        } else {
-
-        }
+        
 	}
 
     void LineRendererSetup()
@@ -75,15 +86,22 @@ public class ProjectileDragging : MonoBehaviour {
 
     void OnMouseDown()
     {
-        spring.enabled = false;
-        clickedOn = true;
+        if (GameObject.Find("PlayerLife").GetComponent<PlayerLife>().lifeVolume > 0)
+        {
+            spring.enabled = false;
+            clickedOn = true;
+        } 
+            
     }
 
     void OnMouseUp()
     {
-        spring.enabled = true;
-        GetComponent<Rigidbody2D>().isKinematic = false;
-        clickedOn = false;
+        if (GameObject.Find("PlayerLife").GetComponent<PlayerLife>().lifeVolume > 0)
+        {
+            spring.enabled = true;
+            GetComponent<Rigidbody2D>().isKinematic = false;
+            clickedOn = false;
+        }
     }
 
     void Dragging()

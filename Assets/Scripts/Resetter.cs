@@ -5,14 +5,21 @@ using UnityEngine;
 public class Resetter : MonoBehaviour {
     public Rigidbody2D projectile;
     public float resetSpeed = 0.025f;
-    public int lifeVolume = 3;  //default life is 3
+    //public GameObject PlayerLife;
 
     private float resetSpeedSqr;
     private SpringJoint2D spring;
     
-
 	// Use this for initialization
 	void Start () {
+        if (GameObject.Find("PlayerLife").GetComponent<PlayerLife>().lifeVolume <= 0)
+        {
+            GameObject.Find("DeadText").SetActive(true);
+        }else
+        {
+            GameObject.Find("DeadText").SetActive(false);
+        }
+        
         resetSpeedSqr = resetSpeed * resetSpeed;
         spring = projectile.GetComponent<SpringJoint2D>();
 
@@ -21,6 +28,7 @@ public class Resetter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.R)) {
+            GameObject.Find("PlayerLife").GetComponent<PlayerLife>().lifeVolume = 3;
             Reset();
         }
 
@@ -32,7 +40,10 @@ public class Resetter : MonoBehaviour {
     void OnTriggerExit2D(Collider2D other)
     {
         if(other.GetComponent<Rigidbody2D>() == projectile) {
-            lifeVolume--;
+            
+           
+            GameObject.Find("PlayerLife").GetComponent<PlayerLife>().lifeVolume--;
+            //Debug.Log(GameObject.Find("PlayerLife").GetComponent<PlayerLife>().lifeVolume);
             Reset();
         }
     }
