@@ -25,10 +25,8 @@ public class TargetDamage : MonoBehaviour {
 	void Update(){
         if (isKilled) {
             timer += Time.deltaTime;
-            Debug.Log(timer);
-            //Debug.Log(Application.loadedLevelName);
-            if(timer > 1.1) {
-                //Debug.Log("time out");
+            //Debug.Log(timer);
+            if(timer > 2) {
                 if (Application.loadedLevelName == "FirstScene") {
                     Application.LoadLevel("SecondScene");
                 } else {
