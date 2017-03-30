@@ -39,8 +39,9 @@ public class TargetDamage : MonoBehaviour {
     {
         if (collision.collider.tag != "Damager")
             return;
-        if (collision.relativeVelocity.sqrMagnitude < damageImpactSpeedSqr)
-            return;
+        //if (collision.relativeVelocity.sqrMagnitude < damageImpactSpeedSqr)
+        //    Debug.Log("test");
+        //    return;
 
         spriteRenderer.sprite = damagedSprite;
         currentHitPoints--;

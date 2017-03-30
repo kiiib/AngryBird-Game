@@ -1,0 +1,69 @@
+Initialize engine version: 5.5.2f1 (3829d7f588f3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 530 (ID=0x1912)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   21.20.16.4590
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.104 seconds
+Platform assembly: C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Github\Angry Bird @ NTU Game Design\output\angry bird_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 32Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.028806 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.217763 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 413.
+Total: 0.233164 ms (FindLiveObjects: 0.037859 ms CreateObjectMapping: 0.010816 ms MarkObjects: 0.169464 ms  DeleteObjects: 0.014122 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.388506 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 413.
+Total: 0.159549 ms (FindLiveObjects: 0.015924 ms CreateObjectMapping: 0.010816 ms MarkObjects: 0.123192 ms  DeleteObjects: 0.009615 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.411642 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 413.
+Total: 0.214835 ms (FindLiveObjects: 0.044769 ms CreateObjectMapping: 0.011417 ms MarkObjects: 0.146328 ms  DeleteObjects: 0.012018 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.607548 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 413.
+Total: 0.221445 ms (FindLiveObjects: 0.040563 ms CreateObjectMapping: 0.024338 ms MarkObjects: 0.146629 ms  DeleteObjects: 0.009615 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.039623 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 413.
+Total: 0.586215 ms (FindLiveObjects: 0.057690 ms CreateObjectMapping: 0.049276 ms MarkObjects: 0.429971 ms  DeleteObjects: 0.047774 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.374985 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 413.
+Total: 0.186290 ms (FindLiveObjects: 0.018929 ms CreateObjectMapping: 0.011718 ms MarkObjects: 0.145727 ms  DeleteObjects: 0.009615 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1c14 -> priority: 1 
+  Thread -> id: 3778 -> priority: 1 
